@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1, user-scalable=0" name="viewport">
+	<meta name='renderer' content="webkit">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta charset="utf-8">
+	<title>9要购_一站式优惠购物平台</title>
+    <meta name="keywords" content="9要购,淘宝优惠券,天猫优惠券,内部券">
+    <meta name="description" content="9要购提供淘宝天猫内部优惠券7*24小时更新，进入网站点击想要的商品，即可免费领取淘宝和天猫的购物优惠券，更优惠的价格买淘宝和天猫的商品。也可以在搜索框中，查找需要的商品优惠券发布情况。">
+	<link rel="stylesheet" href="tkjidicms/cmswap/css/index-20180420.css">
+    <link rel="stylesheet" href="tkjidicms/cmswap/css/swiper.min-20170929.css">
+	<script type="text/javascript" src="tkjidicms/cmswap/js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="tkjidicms/cmswap/js/index.js"></script>
+	<script type="text/javascript" src="tkjidicms/cmswap/js/swipe.js"></script>
+    <script type="text/javascript" src="tkjidicms/cmswap/js/swiper.min.js"></script>
+
+
+</head>
+<body>
+	    <!--轮播弹出框-->
+<div class="tkl">
+    <div class="shadow">
+        <div id="sign">
+
+            <img class="closer" src="tkjidicms/cmswap/images/closer.png">
+            <img class="haohuo" src="tkjidi_www/activity_image/2019-618-300-100.png">
+            <p class="siBuy"></p>
+            <textarea class="textarea" oninput="shuru()"></textarea>
+            <p class="copytext">一键复制</p>
+            <img class="buzhou" src="tkjidicms/cmswap/images/buzhou.png">
+            <p class="last"><span>使用说明:</span>复制掏口令后，新用户下载并打开掏宝APP进入活动，100%获取礼包，超值好货真的免费！
+            </p>
+        </div>
+
+    </div>
+</div>
+<span class="zx-url" style="display:none"></span>
+<span class="zx-tkl" style="display:none"></span>
+	<header>
+		<a href="index-wap.html">
+			<img src="wp-content/uploads/2016/09/logo.png" alt="">
+		</a>
+		<div id="searchf">
+		<input type="text" name="kwd" id="kwd" placeholder="请输入要搜索的商品名称">
+
+			    <span onclick="return urlc()">搜索</span>
+		</div>
+        <script>
+            var FTX_FLAG = 0;
+        function urlc()
+        {
+        	var kwd=$("#kwd").val();
+            if(kwd==""||kwd==undefined)
+            {
+                alert("请输入商品关键字"); return false;
+            }
+            else
+            {
+                if(FTX_FLAG == 1){
+                    localStorage.removeItem('search')
+                    localStorage.removeItem('kwd')
+                    var href = "cmswap/search-big.html?val=" + kwd
+                    window.location.href = href
+
+                }else {
+                    var href = "http://9.ctrlqq.com/index.php?g=wap&r=searchlist&kwd="+$("#kwd").val();
+                    window.location.href = href
+                }
+            }
+
+        }
+         $('#searchf').keydown(function(e){
+            var code= e.keyCode || e.which
+            if(code==13){
+            	var kwd=$("#kwd").val();
+                if(kwd==""||kwd==undefined)
+                {
+                    alert("请输入商品关键字"); return false;
+                }
+                else
+                {
+                    if(FTX_FLAG == 1){
+                        localStorage.removeItem('search')
+                        localStorage.removeItem('kwd')
+                        var href = "cmswap/search-big.html?val=" + kwd
+                        window.location.href = href
+
+                    }else {
+                        var href = "http://9.ctrlqq.com/index.php?g=wap&r=searchlist&kwd="+$("#kwd").val();
+                        window.location.href = href
+                    }
+	            }
+            }
+        })
+
+        </script>
+	</header>
+	<div style="height:50px"></div>
+	<!-- 首次加载弹出0-->
+	        <!--
+    //如果开启了顶部海报 但是没有设置链接应去掉 透明浮窗
+    //anthor:KangLiuchang
+    //date:2018.06.25
+-->
+		<div class="toggle_">
+		<ul class="toggle_ul">
+			<li class="click1 ">
+	            全部分类 <img src="tkjidicms/cmswap/images2/808.png" alt="">
+	        </li>
+	        <li class="click2">
+	            默认排序 <img src="tkjidicms/cmswap/images2/808.png" alt="">
+	        </li>
+	        <li class="click3">
+	            价格筛选 <img src="tkjidicms/cmswap/images2/808.png" alt="">
+	        </li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<div class="toggle_2" style="position: fixed;top: 101px;width: 100%;">
+		<ul class="navbottom swiper-container swiper-container-classfiy">
+			<div class="swiper-wrapper">
+				<li class=" swiper-slide"><a href="index-wap.html#ord">全部</a></li>
+				<li class="swiper-slide "><a href="index-wap_1.html#ord" title="女装">女装</a></li><li class="swiper-slide "><a href="index-wap_2.html#ord" title="男装">男装</a></li><li class="swiper-slide "><a href="index-wap_3.html#ord" title="内衣">内衣</a></li><li class="swiper-slide "><a href="index-wap_4.html#ord" title="母婴">母婴</a></li><li class="swiper-slide active"><a href="#ord" title="美妆">美妆</a></li><li class="swiper-slide "><a href="index-wap_6.html#ord" title="居家">居家</a></li><li class="swiper-slide "><a href="index-wap_7.html#ord" title="鞋包配饰">鞋包配饰</a></li><li class="swiper-slide "><a href="index-wap_8.html#ord" title="美食">美食</a></li><li class="swiper-slide "><a href="index-wap_9.html#ord" title="文体车品">文体车品</a></li><li class="swiper-slide "><a href="index-wap_10.html#ord" title="数码家电">数码家电</a></li><li class="swiper-slide "><a href="index-wap_11.html#ord" title="运动户外">运动户外</a></li><li class="swiper-slide "><a href="index-wap_12.html#ord" title="其他">其他</a></li>
+				<div class="clear"></div>
+			</div>
+		</ul>
+		<ul class="moren">
+			<li class="moren-active">
+				<a href="index-wap_index_5.html#ord">最新</a>
+			</li>
+			<li>
+				<a href="index-wap_index_5_3.html#ord">销量</a>
+			</li>
+			<li>
+				<a href="index-wap_index_5_2.html#ord">券价格</a>
+			</li>
+			<li>
+				<a href="index-wap_index_5_1.html#ord">价格</a>
+			</li>
+			<div class="clear"></div>
+
+		</ul>
+		<div class="jiage_">
+			<form action="http://9.ctrlqq.com/index.php?g=wap#ord" method="get">
+				 <input type="hidden" name="cid" value="5">								<span class="name">价格区间</span>
+				<input type="text" name="min_price" value="" class="input1 min-price">
+				<p style="float: left;margin: 14px 5px 0 5px;color:#d2d2d2">—</p>
+				<input type="text" name="max_price" value="" class="input2 max-price">
+				<button class="btn_2">确认</button>
+				<button type="button" class="btn_1">重置</button>
+			</form>
+			<script>
+			    var regNum = new RegExp("^[0-9]*$"),isNotnum = [0,0];
+			    var testNum = function(obj,n){
+			        if(isNaN(Number(obj.val()))){
+			            obj.val('0');
+			        }
+			        isNotnum[n] = 1;
+			    }
+			    testNum($('.min-price'),0);
+			    testNum($('.max-price'),1);
+
+			    $('.min-price').blur(function(){
+			        testNum($('.min-price'),0);
+			    })
+			    $('.max-price').blur(function(){
+			        testNum($('.max-price'),1);
+			    })
+			    $('.jiage_ form button').click(function(){
+
+			        if(isNotnum[0] == 1 && isNotnum[1] == 1 && $.trim($('.max-price').val()) && $.trim($('.min-price').val()) ){
+			            var maxNum = Math.max(Number($('.max-price').val()),Number($('.min-price').val())),
+			                minNum = Math.min(Number($('.max-price').val()),Number($('.min-price').val()));
+			            $('.max-price').val(maxNum);
+			            $('.min-price').val(minNum);
+			        }
+			        $('.jiage_ form').submit();
+			    })
+			    $('.btn_1').click(function(){
+			    	window.location.href="http://9.ctrlqq.com/index.php?g=wap";
+			    })
+
+			</script>
+		</div>
+	</div>
+<!-- 虚拟消息框 -->
+<div class="lingquan" style="display:none;">
+	<a href="" class="dummy_href">
+		<img class="dummy-img" src="tkjidicms/cmswap/images/qb_1.png" alt="">
+		<div>
+			<span>此商品刚刚被领券</span> <br>
+			<span>我也去看看</span>
+			<img src="tkjidicms/cmswap/images2/150.png" alt="" class="eye">
+		</div>
+	</a>
+</div>
+<script>
+    $('.lingquan').click(function(){
+         $('.lingquan').hide();
+    });
+    var dummy_counts="20"*1000;//每隔时长
+    var dummy_times="3"*1000;//显示多长时间
+   	function dummy(time,status){
+      	$.ajax({
+        url:"http://9.ctrlqq.com/index.php?g=wap&r=api_dummy",
+        dataType:"text",
+        success:function(data){
+        var strs= new Array(); //定义一数组
+        data_info = data;
+        strs=data_info.split("||"); //字符分割
+            if(status == 1){
+                   $('.lingquan').css('display','block');
+            }else{
+                $('.lingquan').css('display','none');
+                if(data_info){
+                    // strs[0] = strs[0].replace('"','').replace(/[\]/g,'');
+                    $('.dummy-img').attr("src",strs[0]);
+                }else{
+                    $('.dummy-img').attr('src','');
+                }
+                $('.dummy_href').attr("href","http://9.ctrlqq.com/index.php?g=wap&r=v&id="+strs[1]);;
+            }
+            var t = setInterval(function(){
+	            if(status == 1){
+	                dummy(dummy_counts,0);
+	            }else{
+	                dummy(dummy_times,1);
+	            }
+	            clearInterval(t);
+            },time);
+        }
+ 	});
+}
+setTimeout("dummy(dummy_counts,0)",0);
+</script><!-- 虚拟消息框结束 -->
+	<div class="banner">
+		<div id="slide" class="mod-slide slide">
+			<div class="slide-in">
+	        	<div>
+	            								<a href="index-view_586850492043_30_wap.html"><img style="width:100%" src="tkjidi/upload/images/1910/08/5d9bdec4df48e.jpg"></a>	        		
+	        	</div><div>
+	            								<a href="index-view_596265953166_1_wap.html"><img style="width:100%" src="tkjidi/upload/images/1910/08/5d9bdee054bef.jpg"></a>	        		
+	        	</div><div>
+	            								<a href="index-view_575405288392_10_wap.html"><img style="width:100%" src="tkjidi/upload/images/1910/08/5d9bdefb7070f.jpg"></a>	        		
+	        	</div><div>
+	            								<a href="index-view_537608648711_10_wap.html"><img style="width:100%" src="tkjidi/upload/images/1910/08/5d9bdf16f122e.jpg"></a>	        		
+	        	</div>			</div>
+			<ul class="slide-pos" id="slide-pos">
+	        	<li class="on"></li><li class=""></li><li class=""></li><li class=""></li>			</ul>
+		</div>
+	</div>
+		<nav class="new-list">
+		<ul>
+			<li>
+				<a href="index-wap_mms.html">
+					<img src="tkjidicms/cmswap/images/17122201.png" alt="">
+					<br>
+					<span>喵喵说<img src="tkjidicms/cmswap/images2/hot1.png" alt=""></span>
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_y.html">
+					<img src="tkjidicms/cmswap/images/qb_1.png" alt="">
+					<br>
+					<span>抢券</span>
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_ba.html">
+					<img src="tkjidicms/cmswap/images/qb_2.png" alt="">
+					<br>
+					<span>8.8包邮</span>
+				</a>
+			</li>
+			<!-- <li>
+				<a href="http://9.ctrlqq.com/index.php?g=wap&r=cha">
+					<img src="//cmspic.judacdn.com/tkjidicms/cmswap/images/qb_5.png" alt="">
+					<br>
+					<span>查券</span>
+				</a>
+			</li> -->
+			<li>
+				<a href="index-wap_ju.html">
+					<img src="tkjidicms/cmswap/images/qb_3.png" alt="">
+					<br>
+					<span>巨划算</span>
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_video.html">
+					<img src="tkjidicms/cmswap/images/video.png" alt="">
+					<br>
+					<span>看货</span>
+				</a>
+			</li>
+			<div class="clear"></div>
+		</ul>
+	</nav>	<!--小编说开始-->
+		<!--小编说结束-->
+			<img src="tkjidicms/cmswap/images/027.png" alt="" style="width: 100%">
+	<div class="huodong_">
+		<a href="index-wap_ju.html">
+			<div class="N01">
+				<img src="tkjidicms/cmswap/images/008.png" alt="" style="width: 70%;margin:10px 0 0 10%">
+				<img src="tkjidicms/cmswap/images/009.png" alt="" style="width: 80%;margin:32px 0 50px 10% ">
+			</div>
+		</a>
+		<ul>
+			<li>
+				<a href="index-wap_y_5.html">
+					<img src="tkjidicms/cmswap/images/010.png" alt="" style="width: 70%;margin: 10px 10px">
+					<img src="tkjidicms/cmswap/images/011.png" alt="" style="width: 50%;margin: 0 25%">
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_y_6.html">
+					<img src="tkjidicms/cmswap/images/012.png" alt="" style="width: 70%;margin: 10px 10px">
+					<img src="tkjidicms/cmswap/images/013.png" alt="" style="width: 60%;margin: 0 20%">
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_ju_tqg.html">
+					<img src="tkjidicms/cmswap/images/014.png" alt="" style="width: 80%;margin: 10px 10px">
+					<img src="tkjidicms/cmswap/images/015.png" alt="" class="asd">
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_ju_hot.html">
+					<img src="tkjidicms/cmswap/images/016.png" alt="" style="width: 80%;margin: 10px 10px">
+					<img src="tkjidicms/cmswap/images/017.png" alt="" style="width: 60%;margin: 0 20%">
+				</a>
+			</li>
+		</ul>
+		<div class="clear"></div>
+	</div><!--
+    //author: 康刘畅
+    //date: 20180831
+    //msg: 代理商城隐藏精品大额券和看货
+-->
+        <div class="dae_">
+            <img src="tkjidicms/cmswap/images/028.jpg" alt="" class="title">
+                <div class="swiper-container swiper-container-dae">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="index-wap_v_25223541.html">
+                            <img src="imgextra/i4/4198719723/O1CN01WsIKgw2LhBQdaDYli_!!419871.jpg" alt="女式小款羽绒服小个子连帽轻便时尚短款修身轻薄保暖韩版秋冬新款">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥120</p>
+                                <p class="name_">女式小款羽绒服小个子连帽轻便时尚短款修身轻薄保暖韩版秋冬新款</p>
+                                <div class="jiage__">￥248.00 </div>
+                                <p class="fengqiang_">已疯抢2件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25223451.html">
+                            <img src="imgextra/i2/2896293258/O1CN01oH5WQW1ZwCwPJ6wqB_!!289629.jpg" alt="儿童智能机器人wifi语音对话讲故事高科技玩具益智早教机器人多功能学习机AI天猫精灵同步中小学教材英汉翻译">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥100</p>
+                                <p class="name_">儿童智能机器人wifi语音对话讲故事高科技玩具益智早教机器人多功能学习机AI天猫精灵同步中小学教材英汉翻译</p>
+                                <div class="jiage__">￥98.00 </div>
+                                <p class="fengqiang_">已疯抢83件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25223438.html">
+                            <img src="imgextra/i4/82943074/O1CN01EtD1PL1YZw44z6LTu_!!829430.jpg" alt="笑猫日记全套25册全集 杨红樱系列书 小学生课外阅读书籍儿童读物9-10-12岁新出版四年级六第一季第二季新版小猫漫画版">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥100</p>
+                                <p class="name_">笑猫日记全套25册全集 杨红樱系列书 小学生课外阅读书籍儿童读物9-10-12岁新出版四年级六第一季第二季新版小猫漫画版</p>
+                                <div class="jiage__">￥199.00 </div>
+                                <p class="fengqiang_">已疯抢138件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25223434.html">
+                            <img src="imgextra/i1/3595491052/O1CN019odvHD1JdrD16C7uW_!!359549.jpg" alt="科沃斯扫地机器人家用地宝DL33超薄吸尘视觉规划洗地拖地机一体机">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥100</p>
+                                <p class="name_">科沃斯扫地机器人家用地宝DL33超薄吸尘视觉规划洗地拖地机一体机</p>
+                                <div class="jiage__">￥1699.00 </div>
+                                <p class="fengqiang_">已疯抢496件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25222731.html">
+                            <img src="imgextra/i1/2201549001915/O1CN01f1VhAl1Q171V6czlI_!!220154.jpg" alt="雅鹿羽绒服男士2019冬季新款连帽中长款加厚外套男潮潮流帅气爆款">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥440</p>
+                                <p class="name_">雅鹿羽绒服男士2019冬季新款连帽中长款加厚外套男潮潮流帅气爆款</p>
+                                <div class="jiage__">￥359.00 </div>
+                                <p class="fengqiang_">已疯抢749件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25222270.html">
+                            <img src="imgextra/i4/4021155862/O1CN01XrfQKK1tAqEr2iHqH_!!402115.jpg" alt="爸爸小炒家用智能全自动炒菜机器人烹饪锅无油烟不沾炒货机电炒锅">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥1000</p>
+                                <p class="name_">爸爸小炒家用智能全自动炒菜机器人烹饪锅无油烟不沾炒货机电炒锅</p>
+                                <div class="jiage__">￥1188.00 </div>
+                                <p class="fengqiang_">已疯抢5件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25222086.html">
+                            <img src="imgextra/i3/2241323200/O1CN01VBhXrf1ZVdwCty4QD_!!224132.jpg" alt="宾克苹果 智能手环手表手机运动健康计步器心率血压防水信息提醒适用于小米123苹果oppo华为vivo安卓IOS">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥300</p>
+                                <p class="name_">宾克苹果 智能手环手表手机运动健康计步器心率血压防水信息提醒适用于小米123苹果oppo华为vivo安卓IOS</p>
+                                <div class="jiage__">￥25.00 </div>
+                                <p class="fengqiang_">已疯抢111件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25221559.html">
+                            <img src="imgextra/i2/876583493/O1CN01TheAb71bfq0rsdAG6_!!876583.jpg" alt="伯希和户外旅行冲锋衣男女潮牌韩国外套三合一抓绒可拆卸登山服装">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥100</p>
+                                <p class="name_">伯希和户外旅行冲锋衣男女潮牌韩国外套三合一抓绒可拆卸登山服装</p>
+                                <div class="jiage__">￥359.00 </div>
+                                <p class="fengqiang_">已疯抢4355件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25220300.html">
+                            <img src="imgextra/i4/2200698778505/O1CN015qPSpX2ChL3BfEPhb_!!220069.jpg" alt="coocaa/酷开Live-time蓝牙音箱双喇叭家用无线大音量迷你桌面小音响便携式连手机小型重低音炮户外复古收音机">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥130</p>
+                                <p class="name_">coocaa/酷开Live-time蓝牙音箱双喇叭家用无线大音量迷你桌面小音响便携式连手机小型重低音炮户外复古收音机</p>
+                                <div class="jiage__">￥469.00 </div>
+                                <p class="fengqiang_">已疯抢1件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25220241.html">
+                            <img src="i2/3333325191/TB22BMWXnJYBeNjy1zeXXahzVXa_!!33.jpg" alt="格灵儿童早教故事机0-3-6岁智能对话机器人WiFi宝宝婴幼儿mp3玩具">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥100</p>
+                                <p class="name_">格灵儿童早教故事机0-3-6岁智能对话机器人WiFi宝宝婴幼儿mp3玩具</p>
+                                <div class="jiage__">￥198.00 </div>
+                                <p class="fengqiang_">已疯抢37件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25219964.html">
+                            <img src="imgextra/i3/1122844978/O1CN01U8MGUK1mdyB6hSXHt_!!112284.jpg" alt="美的踢脚线取暖器家用速热地暖式电暖气卧室节能省电对流式暖风机">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥210</p>
+                                <p class="name_">美的踢脚线取暖器家用速热地暖式电暖气卧室节能省电对流式暖风机</p>
+                                <div class="jiage__">￥339.00 </div>
+                                <p class="fengqiang_">已疯抢165件</p>
+                            </div>
+                            </a>
+                        </div><div class="swiper-slide">
+                            <a href="index-wap_v_25219963.html">
+                            <img src="oimg_603051537575_1570504189.jpg.jpg" alt="鹏贝全自动足疗机腿部按摩器小腿脚部老人家用足底揉捏穴位按摩仪">
+
+                            <div class="swiper-slide-content" id="ord">
+                                <p class="sheng_"> 领券省¥200</p>
+                                <p class="name_">鹏贝全自动足疗机腿部按摩器小腿脚部老人家用足底揉捏穴位按摩仪</p>
+                                <div class="jiage__">￥288.00 </div>
+                                <p class="fengqiang_">已疯抢20件</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>	<div class="new-content fath" data-url="http://9.ctrlqq.com/index.php">
+		<p class="new-title">
+			<img src="tkjidicms/cmswap/images/018.png" alt="">
+			<span class="Num_">56363</span>
+		</p>
+		<div class="new-list_">
+			<ul id="thelist">
+				<input type="hidden" id="currentPage" value="1">
+        		<input type="hidden" id="maxPage" value="1">
+                <input type="hidden" id="cs" value="yhq">
+            	                <li>
+					<a href="index-wap_v_25224562.html">
+						<img src="imgextra/i3/431716083/O1CN01Hx22Ta1uo3pTnGyve_!!431716.jpg" alt="李佳琦超火直播推荐大瓶装黑胡椒散粉55g定妆控油防水持久提亮粉">
+						<div class="new-list_right">
+							<p class="new-name">李佳琦超火直播推荐大瓶装黑胡椒散粉55g定妆控油防水持久提亮粉</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥100</div>
+							</div>
+							<p class="new-price">￥28.8</p>
+							<p class="new-sale">销量116</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224558.html">
+						<img src="imgextra/i2/481830776/O1CN01FMTaxk1HbRuPTBfac_!!481830.jpg" alt="手膜手部护理套去黑嫩白保湿补水手套李佳琦推荐抖音同款脚膜保养">
+						<div class="new-list_right">
+							<p class="new-name">手膜手部护理套去黑嫩白保湿补水手套李佳琦推荐抖音同款脚膜保养</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥3</div>
+							</div>
+							<p class="new-price">￥13.9</p>
+							<p class="new-sale">销量288</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224550.html">
+						<img src="imgextra/i2/59397151/O1CN01VEOKd122hCpZIpjE4_!!593971.jpg" alt="敬亲恩白转黑染发剂第五代一支黑中华禅洗植物不伤发一洗黑润黑露">
+						<div class="new-list_right">
+							<p class="new-name">敬亲恩白转黑染发剂第五代一支黑中华禅洗植物不伤发一洗黑润黑露</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥100</div>
+							</div>
+							<p class="new-price">￥53</p>
+							<p class="new-sale">销量133</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224538.html">
+						<img src="i1/690563319/O1CN014VPVjv1aO96Ci1RzT_!!690563.jpg" alt="Renavatio瓷光肌原液25ML提亮均匀肤色增皮肤透明感雪嫩肌肤柔滑">
+						<div class="new-list_right">
+							<p class="new-name">Renavatio瓷光肌原液25ML提亮均匀肤色增皮肤透明感雪嫩肌肤柔滑</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥80</div>
+							</div>
+							<p class="new-price">￥19.9</p>
+							<p class="new-sale">销量107</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224514.html">
+						<img src="imgextra/i3/3427171083/O1CN01Gf6CKQ1Js3VFbgBa8_!!342717.jpg" alt="日本Freeplus芙丽芳丝净润氨基酸洗面奶 温和弱酸性敏感肌洁面乳">
+						<div class="new-list_right">
+							<p class="new-name">日本Freeplus芙丽芳丝净润氨基酸洗面奶 温和弱酸性敏感肌洁面乳</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥10</div>
+							</div>
+							<p class="new-price">￥78</p>
+							<p class="new-sale">销量103</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224504.html">
+						<img src="imgextra/i3/54936882/O1CN01QANf3F20i0H1RWPX2_!!0-item.jpg" alt="too cool for school涂酷艺术课堂三色修容粉阴影盘侧影鼻影暗影">
+						<div class="new-list_right">
+							<p class="new-name">too cool for school涂酷艺术课堂三色修容粉阴影盘侧影鼻影暗影</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥10</div>
+							</div>
+							<p class="new-price">￥69</p>
+							<p class="new-sale">销量49</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224503.html">
+						<img src="imgextra/i4/2790434276/O1CN015CLRZI1hSS8dLzUQK_!!279043.jpg" alt="小金条+安瓶套餐优惠正品安瓶享优惠拍此链接">
+						<div class="new-list_right">
+							<p class="new-name">小金条+安瓶套餐优惠正品安瓶享优惠拍此链接</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥30</div>
+							</div>
+							<p class="new-price">￥68</p>
+							<p class="new-sale">销量23</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224502.html">
+						<img src="imgextra/i4/3365321350/O1CN01TH0AeP1LqLE1iTsqo_!!336532.jpg" alt="专业修眉刀片刮眉刀套装女初学者化妆师神器画眉毛卡刀架工具套装">
+						<div class="new-list_right">
+							<p class="new-name">专业修眉刀片刮眉刀套装女初学者化妆师神器画眉毛卡刀架工具套装</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥3</div>
+							</div>
+							<p class="new-price">￥6.8</p>
+							<p class="new-sale">销量473</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224494.html">
+						<img src="imgextra/i4/54936882/O1CN01D0eu3o20i0GbTgbEv_!!549368.jpg" alt="VOV 薇欧薇千人幻色美唇棒淡化唇纹滋润口红护唇膏变色唇膏学生">
+						<div class="new-list_right">
+							<p class="new-name">VOV 薇欧薇千人幻色美唇棒淡化唇纹滋润口红护唇膏变色唇膏学生</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥5</div>
+							</div>
+							<p class="new-price">￥54</p>
+							<p class="new-sale">销量14</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224433.html">
+						<img src="imgextra/i2/2762108834/O1CN01wnswp02F81OoZnO47_!!276210.jpg" alt="网红同款光感CC霜遮瑕棒持久遮瑕隔离保湿提亮肤色防水防汗粉底液">
+						<div class="new-list_right">
+							<p class="new-name">网红同款光感CC霜遮瑕棒持久遮瑕隔离保湿提亮肤色防水防汗粉底液</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥30</div>
+							</div>
+							<p class="new-price">￥19.9</p>
+							<p class="new-sale">销量1804</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224402.html">
+						<img src="imgextra/i1/2200613627578/O1CN01ippWB625qltLRxZrC_!!220061.jpg" alt="lacabine西班牙小安瓶精华VC小安瓶2ml*10支">
+						<div class="new-list_right">
+							<p class="new-name">lacabine西班牙小安瓶精华VC小安瓶2ml*10支</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥130</div>
+							</div>
+							<p class="new-price">￥49</p>
+							<p class="new-sale">销量20</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224399.html">
+						<img src="i1/690563319/O1CN01PaikqK1aO96FUhn86_!!690563.jpg" alt="Renavatio童颜时光原液25ML紧致细腻增加弹性零皱纹零毛孔零瑕疵">
+						<div class="new-list_right">
+							<p class="new-name">Renavatio童颜时光原液25ML紧致细腻增加弹性零皱纹零毛孔零瑕疵</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥80</div>
+							</div>
+							<p class="new-price">￥19.9</p>
+							<p class="new-sale">销量106</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224388.html">
+						<img src="imgextra/i4/3578670482/O1CN01I6b21Q1FQnSbYDsxb_!!357867.jpg" alt="超火补水保湿深层清洁卸妆水500ml温和无刺激脸部眼唇三合一卸妆">
+						<div class="new-list_right">
+							<p class="new-name">超火补水保湿深层清洁卸妆水500ml温和无刺激脸部眼唇三合一卸妆</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥25</div>
+							</div>
+							<p class="new-price">￥24.9</p>
+							<p class="new-sale">销量62</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224385.html">
+						<img src="imgextra/i1/312045056/O1CN01KKK2RO1nDh4YBMeOA_!!312045.jpg" alt="RT水光肌冻干粉寡肽修护去粉刺毛孔闭口豆印豆坑微针光子点痣无菌">
+						<div class="new-list_right">
+							<p class="new-name">RT水光肌冻干粉寡肽修护去粉刺毛孔闭口豆印豆坑微针光子点痣无菌</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥100</div>
+							</div>
+							<p class="new-price">￥19.9</p>
+							<p class="new-sale">销量216</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224382.html">
+						<img src="imgextra/i3/3578670482/O1CN01oZM75B1FQnSQo9VsE_!!357867.jpg" alt="超火安瓶精华水爽肤水化妆水玻尿酸烟酰胺补水保湿控油收缩毛孔女">
+						<div class="new-list_right">
+							<p class="new-name">超火安瓶精华水爽肤水化妆水玻尿酸烟酰胺补水保湿控油收缩毛孔女</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥40</div>
+							</div>
+							<p class="new-price">￥19.9</p>
+							<p class="new-sale">销量25</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224255.html">
+						<img src="imgextra/i2/4061838190/O1CN01BG5LMI2AN4G9qNM3S_!!406183.jpg" alt="菲诗小铺发际线粉修容神器填充阴影粉神器男女补发遮发头发额头">
+						<div class="new-list_right">
+							<p class="new-name">菲诗小铺发际线粉修容神器填充阴影粉神器男女补发遮发头发额头</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥5</div>
+							</div>
+							<p class="new-price">￥44.9</p>
+							<p class="new-sale">销量1323</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224254.html">
+						<img src="imgextra/i4/1835946814/O1CN01OGgZpP20CrJ0sH63E_!!183594.jpg" alt="水宝宝防晒霜女婴儿SPF50+防水紫外线面部全身大瓶军训李佳琪推荐">
+						<div class="new-list_right">
+							<p class="new-name">水宝宝防晒霜女婴儿SPF50+防水紫外线面部全身大瓶军训李佳琪推荐</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥20</div>
+							</div>
+							<p class="new-price">￥38</p>
+							<p class="new-sale">销量5679</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224235.html">
+						<img src="imgextra/i2/42224313/O1CN01ziQU0V1hjOmTL08tv_!!422243.jpg" alt="MissCandy健康甲油15ml网红款指甲油抖音可撕拉无毒免烤 夏日水果">
+						<div class="new-list_right">
+							<p class="new-name">MissCandy健康甲油15ml网红款指甲油抖音可撕拉无毒免烤 夏日水果</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥30</div>
+							</div>
+							<p class="new-price">￥35</p>
+							<p class="new-sale">销量1341</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224233.html">
+						<img src="imgextra/i3/2015180287/O1CN01vGdyr11DzUEbw5LVA_!!201518.jpg" alt="桃之夭夭眼线液笔女不晕染防水棕色李佳琦伪素颜超好用的极细正品">
+						<div class="new-list_right">
+							<p class="new-name">桃之夭夭眼线液笔女不晕染防水棕色李佳琦伪素颜超好用的极细正品</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥10</div>
+							</div>
+							<p class="new-price">￥18.5</p>
+							<p class="new-sale">销量5836</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li><li>
+					<a href="index-wap_v_25224225.html">
+						<img src="imgextra/i1/2285740086/O1CN01Uc7Q2o1CVQc8mBx6k_!!228574.jpg" alt="Mixx氨基酸无硅油洗发水护发精华洗护套装柔顺去屑止痒控油男女">
+						<div class="new-list_right">
+							<p class="new-name">Mixx氨基酸无硅油洗发水护发精华洗护套装柔顺去屑止痒控油男女</p>
+							<div class="new-quan">
+								<span>券</span>
+								<div>￥40</div>
+							</div>
+							<p class="new-price">￥59</p>
+							<p class="new-sale">销量5813</p>
+							<button class="qiang_">立即抢券</button>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="loading" id='loading'>
+		<span>
+			<img src="tkjidicms/cmswap/images/5-121204193R5-50.gif" alt="奋力加载中">
+			奋力加载中...
+		</span>
+	</div>
+	<div style="height: 60px">
+	</div>
+			<a href="javascript:;" class="to_top">
+		<img src="tkjidicms/cmswap/images/back.png" alt="">
+	</a>
+   
+    <footer class="footer_">
+        <div style="display:none">
+            <script src="z_stat-1261238238_1261238238.js" language="JavaScript"></script>
+            /index.php?g=wap&cid=5||http://9.ctrlqq.com/index.php        </div>
+        <ul>
+						<li>
+				<a href="index-wap.html">
+					<img src="tkjidicms/cmswap/images/022.png" alt="">
+					<br>
+					<span class="active">
+						首页
+					</span>
+										
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_ba.html">
+										<img src="tkjidicms/cmswap/images/023.png" alt="">
+					<br>
+					<span>
+						8.8包邮
+					</span>					
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_cha.html">
+										<img src="tkjidicms/cmswap/images/024.png" alt="">
+					<br>
+					<span>
+						查券
+					</span>					
+					
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_ju.html">
+					
+										<img src="tkjidicms/cmswap/images/025.png" alt="">
+					<br>
+					<span>
+						巨划算
+					</span>					
+				</a>
+			</li>
+			<li>
+				<a href="index-wap_video.html">
+										<img src="tkjidicms/cmswap/images/026.png" alt="">
+					<br>
+					<span>
+						看货
+					</span>					
+					
+				</a>
+			</li>		</ul>
+	</footer>
+<div style="display:none">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260576050'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260576050%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>    </div><div style="display:none">
+<script src="z_stat-1261238238_1261238238.js" language="JavaScript"></script>
+
+</div>
+</body>
+<script>
+	$(function() {
+		var oh=$(window).scrollTop();
+		if(oh>200){
+				$(".to_top").css("display","block");
+			}
+		$(window).scroll(function() {
+			oh=$(window).scrollTop();
+			if(oh>200){
+				$(".to_top").css("display","block");
+			}else{
+				$(".to_top").css("display","none");
+			}
+		})
+		$(".to_top").click(function() {
+			$("html,body").animate({scrollTop:0});
+		})	
+		$(".f_img1").click(function() {
+			window.history.back();
+		})
+	})
+</script>
+</html>
+
+
+
+<script>
+	var totalheight = 0;
+	var loading = false;
+	var cid="5";		        /*关闭下载广告*/
+	$(".close").click(function () {
+		$(".download").remove()
+    })
+    // 打开下载链接
+    $('.download').click(function(e){
+        var evt=e || event;
+        evt.cancelBubble = true;
+        evt.stopPropagation();
+        window.location.href="http://9.ctrlqq.com/index.php?g=wap&r=downsn"
+    })
+	$(window).scroll(function () {
+		if($(window).scrollTop() >= 100){
+            $(".toggle_").fadeIn(1000); // 开始淡入
+        } else{
+            $(".toggle_").stop(true,true).fadeOut(1000); // 如果小于等于 200 淡出
+            $(".toggle_2").stop(true,true).fadeOut(1000);
+        }
+		//loadData();
+	});
+    /*掏口令弹出窗*/
+
+    var copyFlag=true;
+    $('.tkl .shadow #sign .copytext').click(function(){
+        $(this).attr('data-clipboard-text',zxTkl);
+        var clipboard = new Clipboard('.tkl .shadow #sign .copytext');
+        clipboard.on('success', function(e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+            $('.tkl .shadow #foo').hide();
+            copyFlag=false;
+            $('.tkl .shadow #sign .copytext').html('已复制')
+            e.clearSelection();
+            $('.tkl .shadow #sign .copytext').css('background','#ff954e')
+        });
+        clipboard.on('error',function(e){
+            $('.tkl .shadow #sign .copytext').html('复制失败');
+            $('.tkl .shadow #sign .copytext').css('background','#ff954e')
+        })
+        var timer1=setTimeout(function(){
+            $('.tkl .shadow #sign .copytext').html('一键复制')
+            $('.tkl .shadow #sign .copytext').css('background','#FF3C3C')
+        },5000)
+    });
+    var value= $('.tkl .shadow .textarea').val();
+    function shuru(){
+        $('.tkl .shadow .textarea').val(value)
+    }
+//    点击筛选
+	$(".click1").click(function () {
+        $(".toggle_2").show()
+		$(".navbottom").toggle();
+		$(".moren").hide();
+		$(".jiage_").hide();
+        sh0w()
+    })
+    $(".click2").click(function () {
+        $(".toggle_2").show()
+        $(".moren").toggle();
+        $(".navbottom").hide();
+        $(".jiage_").hide();
+    })
+    $(".click3").click(function () {
+        $(".toggle_2").show()
+        $(".jiage_").toggle();
+        $(".moren").hide();
+        $(".navbottom").hide();
+    })
+     $(".toggle_ul li").click(function () {
+        $(this).addClass("click-active").siblings().removeClass("click-active")
+        $(".toggle_ul li img").attr('src','//cmspic.judacdn.com/tkjidicms/cmswap/images2/808.png')
+
+        $(this).find("img").attr('src','//cmspic.judacdn.com/tkjidicms/cmswap/images/up1.png')
+    })
+    //底部导航特效
+    // $('.navbottom li').click(function(){
+    //     $(this).addClass('active').siblings().removeClass('active');
+    // })
+
+	/*默认筛选*/
+	// $(".moren li").click(function () {
+	// 	$(this).addClass("moren-active").siblings().removeClass("moren-active")
+ //    })
+	// $(".toggle_ul li").click(function () {
+	// 	$(this).addClass("click-active").siblings().removeClass("click-active")
+ //    })
+    $(".adver_close").click(function(){
+    	$(".advertising").hide()
+    })
+	function sh0w() {
+        var mySwiper = new Swiper('.swiper-container-classfiy', {
+            slidesPerView : 7,
+            longSwipesRatio : 0.1,
+            slideToClickedSlide:true,
+            longSwipesMs : 1000,
+            longSwipes:false,
+            iOSEdgeSwipeDetection : true,
+            touchReleaseOnEdges:true,
+        })
+        var count=null;
+		for(var i=0;i<$(".navbottom li").length;i++){
+			if($(".navbottom li").eq(i).attr("class")=="swiper-slide active"){
+				count=i;
+				mySwiper.slideTo(count, 0, false);
+				break;
+			}
+		}
+		$(".navbottom li").click(function(){
+		     dtindex=$(this).index()
+		     $(".navbottom .swiper-slide").eq(dtindex).addClass("active").siblings().removeClass("active")
+		})
+    }
+    /*大额券*/
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container-dae', {
+            autoplay: 5000,//可选选项，自动滑动
+            slidesPerView : 3,
+            spaceBetween : 10,
+            slidesOffsetBefore : 10,
+            slidesOffsetAfter : 10,
+        })
+    })
+</script>
+<!--2017-10-20红包-->
+<script src="tkjidicms/cmswap/js/fuzhi.js"></script>
+<script>
+    $(".hb_close").click(function () {
+        $(".one-one").hide()
+    })
+    $(function () {
+        function is_weixin(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var is_weixin = is_weixin();
+        if(is_weixin){
+        	var url = $(".one-hb").attr("data-url");
+        	$(".chai3").hide()
+            $(".code").show()
+            $(".one-hb").addClass("one-hbao")
+            $('.one-hbao').css({'background':'url('+url+') no-repeat','backgroundSize':'cover'})
+		}else{
+            $(".code").hide()
+            $(".chai3").show()
+		}
+    })
+//  复制功能
+    var copyFlag=true;
+    $('.hb_keycope').click(function(){
+        $(this).attr('data-clipboard-text','');
+        var clipboard = new Clipboard('.hb_keycope');
+        clipboard.on('success', function(e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+            $('#foo').hide();
+            copyFlag=false;
+            $('.hb_keycope').html('已复制')
+            e.clearSelection();
+            $('.hb_keycope').css('color','#914800')
+        });
+        clipboard.on('error',function(e){
+            $('.hb_keycope').html('复制失败');
+            $('.hb_keycope').css('color','#914800')
+        })
+        var timer1=setTimeout(function(){
+            $('.copytext').html('一键复制')
+            $('.hb_keycope').css('color','#914800')
+        },5000)
+    })
+    // var value=$('.tkj').html();
+    // var textarea=document.getElementsByClassName('tkj')[0];
+    // textarea.addEventListener('input',function(){
+    //     $('.tkj').html(value)
+    // },false)
+//  轮播图添加ID
+    $(".slide-in").find("div:first-child").attr("id","newId");
+    $("#newId").on('click',function () {
+        $(".one-one").show()
+    })
+</script>
+
+<script type="text/javascript" src="tkjidicms/cms/js/jquery.cookie.js"></script>
+
+<script>
+    if(getOS()){
+		$(".purchase").attr("href",$(".purchase").attr("data-url1"));
+	}
+	else
+	{
+		$(".purchase").attr("href",$(".purchase").attr("data-url2"));
+	}
+	function getOS(){
+		var ua = window.navigator.userAgent.toLowerCase(),
+			iPhone = /iphone/i.test(ua) ? true : false,
+			android = /android/i.test(ua) ? true : false;
+			if(iPhone){
+				return true;
+			}else{
+				return false;
+			}
+	}
+    $(document).ready(function () {
+    	$(".one-one").show()
+    });
+    /*招新*/
+    var zxTkl = $(".zx-tkl").text()
+    var zxUrl = $(".zx-url").text()
+
+    var ua = navigator.userAgent.toLowerCase();
+    var isWeixin = ua.indexOf('micromessenger') != -1;
+    if (isWeixin) {
+        $(".slider").removeAttr("href",zxUrl)
+        $(".slider img").click(function(){
+            $(".tkl .shadow").show();
+        })
+        $(".closer").click(function(){
+            $(".tkl .shadow").hide();
+        })
+                $(".purchase").removeAttr("href",zxUrl)
+        $(".redB").click(function(){
+            $(".tkl .shadow").show();
+        })    }else{
+    	$(".slider").attr("href",zxUrl)
+    }
+    var length = $(".wenben").width()
+    var length_ = $("marquee").width()
+    if(length > length_){
+        $("marquee").attr("behavior","scroll")
+    }
+</script>

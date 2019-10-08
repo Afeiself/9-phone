@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>9要购_一站式优惠购物平台</title>
+    <meta name="keywords" content="9要购,淘宝优惠券,天猫优惠券,内部券">
+    <meta name="description" content="9要购提供淘宝天猫内部优惠券7*24小时更新，进入网站点击想要的商品，即可免费领取淘宝和天猫的购物优惠券，更优惠的价格买淘宝和天猫的商品。也可以在搜索框中，查找需要的商品优惠券发布情况。">
+    <link rel="stylesheet" href="tkjidicms/cmswap/css3/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="tkjidicms/cmswap/css3/tkjidi.mobile.flex.css">
+    <link rel="stylesheet" href="tkjidicms/cmswap/css3/newDetail.css">
+    <script src="tkjidicms/cmswap/js3/jquery-3.2.1.min.js"></script>
+    <script src="tkjidicms/cmswap/js3/swiper-4.3.3.min.js"></script>
+    <script src="tkjidicms/cmswap/js3/tkjidi.js"></script>
+    <!--    <script src="tkjidicms/cmswap/js3/template.js"></script>-->
+    <style>
+        body,
+        html {
+            font-size: 50px;
+            background: #f5f5f5;
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+            padding-bottom: 0.96rem;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 复制口令弹窗 -->
+<div class="alertCode" id="alertCode">
+    <img class="alertCode-close" src='tkjidicms/cmswap/images3/f_close.png' onclick="Tkjidi.Modal.hideModal()">
+    <div class="alertCode-title flex justifyCenter alignCenter">掏口令购买</div>
+    <div class="alertCode-code flex justifyCenter alignCenter flexWrap">
+            </div>
+    <a class="copy-code flex justifyCenter alignCenter" data-clipboard-text="" onclick="copyText(this)">一键复制</a>
+    <p class="erro-copy-worning flex justifyCenter">(若一键复制失败，请长按文字手动复制)</p>
+    <img class="erro-copy-img" src="tkjidicms/cmswap/images3/5.png" alt="图片加载失败">
+    <div class="alertCode-using">
+        <span class="alertCode-using-worning">使用说明:</span>
+        <span>复制掏口令后打开[手机掏宝]即可领取优惠券购买!</span>
+    </div>
+    <div class="alertCode-using">
+        <span class="alertCode-using-worning">温馨提示:</span>
+        <span>手机无[手机掏宝]者，可以选浏览器购买方式哦~</span>
+    </div>
+</div>
+
+<!-- 分享口令弹窗 -->
+<div class="alertShare" id="alertShare">
+    <img class="alertCode-close" src='tkjidicms/cmswap/images3/f_close.png' onclick="Tkjidi.Modal.hideModal()">
+    <div class="alertShare-title flex justifyCenter alignCenter">复制分享文案</div>
+    <textarea class="alertShare-code flex justifyCenter alignCenter flexWrap">
+【商品名称】  &nbsp;
+【券前】 元 &nbsp;
+【券后】 元 &nbsp;
+【复制此信息打开手机掏宝即可查看并下单】 &nbsp;
+
+            </textarea>
+    <a class="share-code flex justifyCenter alignCenter" onclick="copyText2(this)">一键复制</a>
+    <p class="erro-copy-worning flex justifyCenter">(长按文字区域手动复制掏口令)</p>
+</div>
+<!-- 分享层 -->
+<div class="share-box">
+    <img class="share-box-img" src="" alt="加载失败">
+    <div class="share-close" onclick="Tkjidi.Modal.hideModal()">
+        <img src="tkjidicms/cmswap/images3/del.png">
+    </div>
+</div>
+<div class="goods-info" id="goods-info">
+    <!-- 返回按钮 -->
+    <div class="sus-btn toback" onclick="window.history.length > 1? window.history.back(-1) : window.location.href='index.html'">
+        <img src="tkjidicms/cmswap/images3/to_back.png" alt="" srcset="">
+    </div>
+    <!-- 返回首页 -->
+    <a class="sus-btn toindex" onclick="window.location.href='../index.php?g=wap'">
+        <img src="tkjidicms/cmswap/images3/to_home.png" alt="回首页">
+    </a>
+    <!-- 分享 -->
+    <div class="sus-btn toshare" onclick="shareImg()">
+        <img src="tkjidicms/cmswap/images3/xiangji.png" alt="回首页">
+    </div>
+    <!-- 搜同款 -->
+    <div class="sus-btn tosearch" onclick="search()">
+        <img src="tkjidicms/cmswap/images3/search.png" alt="" srcset="">
+    </div>
+    <!-- 轮播或视频 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-type="img"><img class="deImg" style="width: 100%;" src="_600x600.jpg" alt=""></div>        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--底部详情  -->
+    <div class="goods-bottom-group" id="goods-bottom-info">
+        <div class="goods-title flex alignCenter">
+            <div class="goods-title-img flex alignCenter">
+                                    <img src="tkjidicms/cmswap/images3/superSearch/tb.png" alt="">
+                            </div>
+            <div class="goods-title-text">
+                            </div>
+        </div>
+        <div class="goods-details flex alignCenter justifyBetween">
+            <div class="goods-bottom-left flex alignCenter">
+                <div class="money">￥                     <span>券后</span>
+                </div>
+                <div class="voucher">
+                    券 0                    <div class="voucher-left"></div>
+                    <div class="voucher-right"></div>
+                </div>
+            </div>
+            <div class="goods-bottom-right flex alignCenter">
+                <div class="colume-img flex alignCenter">
+                    <img src="tkjidicms/cmswap/images3/170.png" alt="">
+                </div>
+                <div class="volume">
+                    销量
+                    <span>
+                                                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--      推荐文案         -->
+<div class='recommend flex' id="recommend">
+    <div class='recommend_top'>推荐</div>
+    <span class="twoLines">
+                </span>
+</div>
+<!--      图文详情        -->
+<div class='detail_image_list' id="detail_iamge_list">
+    <div class='detail_image_title flex justifyCenter alignCenter' onclick='slideImg(this)'>
+        <span>宝贝图文详情</span>
+        <img class='imglist_up' src="tkjidicms/cmswap/images3/up.png" alt="">
+        <img class='imglist_down' src="tkjidicms/cmswap/images3/down.png" alt="">
+    </div>
+    <div class='rel_image_list' id="content">
+        <!--  宝贝图文详情  -->
+    </div>
+</div>
+<!-- 猜你喜欢 -->
+<div class="guessLike">
+    <img class="like-title-img" src="tkjidicms/cmswap/images3/love.jpg" alt="" srcset="">
+    <ul class="like-list flex" id="like-list">
+        <li class="like-item">
+                <a href="index-wap_v_25224563.html">
+                    <div class="like-img flex alignCenter">
+                        <img src="imgextra/i3/2854613375/O1CN01Wq8EWr1annHlQ1ndR_!!285461.jpg" style="width: 100%" alt="图片加载失败">
+                    </div>
+                    <div class="like-title">
+                        水暖电热毯双人水循环家用注水加水无辐射学生宿舍单人安全电褥子                    </div>
+                    <div class="like-coupon">券后 9                    </div>
+                </a>
+            </li><li class="like-item">
+                <a href="index-wap_v_25224514.html">
+                    <div class="like-img flex alignCenter">
+                        <img src="imgextra/i3/3427171083/O1CN01Gf6CKQ1Js3VFbgBa8_!!342717.jpg" style="width: 100%" alt="图片加载失败">
+                    </div>
+                    <div class="like-title">
+                        日本Freeplus芙丽芳丝净润氨基酸洗面奶 温和弱酸性敏感肌洁面乳                    </div>
+                    <div class="like-coupon">券后 78                    </div>
+                </a>
+            </li><li class="like-item">
+                <a href="index-wap_v_25224380.html">
+                    <div class="like-img flex alignCenter">
+                        <img src="imgextra/i3/1755010327/O1CN01Br8Fct1EHnzDbNSzd_!!175501.jpg" style="width: 100%" alt="图片加载失败">
+                    </div>
+                    <div class="like-title">
+                        高领毛衣女修身长袖打底衫2019年秋冬季新款内搭紧身针织衫洋气潮                    </div>
+                    <div class="like-coupon">券后 68                    </div>
+                </a>
+            </li>    </ul>
+</div>
+<!-- 底部 -->
+<div class="New-footer flex flexNowrap New-footerA">
+    <div class="New-footer-share flex alignCenter justifyCenter" onclick="alertShare()">
+        <div class="New-footer-img flex alignCenter">
+            <img src="tkjidicms/cmswap/images3/share.jpg" alt="">
+        </div>
+        <div class="New-footer-text">分享</div>
+    </div>
+    <div class="New-footer-btn New-footer-code" onclick="alertCode()">口令购买</div>
+    <a href="javascript:;" class="New-footer-btn New-footer-link">
+                    立即领券
+            </a>
+</div>
+<!-- 底部微信版本 -->
+<div class="New-footer flex flexNowrap New-footerB">
+    <div class="New-footer-share flex alignCenter justifyCenter New-footerB-share" onclick="alertShare()">
+        <div class="New-footer-img flex alignCenter">
+            <img src="tkjidicms/cmswap/images3/share.jpg" alt="">
+        </div>
+        <div class="New-footer-text">分享</div>
+    </div>
+    <div class="New-footer-btn New-footer-code New-footerB-btn" onclick="alertCode()">口令购买</div>
+</div>
+<script>
+    var Tkjidi = new Tkjidi()
+    var mainurl = document.domain;
+    var url = [
+        mainurl
+    ]
+
+    //页面适配
+    Tkjidi.getRem(750, 100)
+    window.onresize = function () {
+        Tkjidi.getRem(750, 100)
+    }
+    //初始化swiper
+    var mySwiper = new Swiper('.goods-img', {
+        autoplay: 5000,
+    })
+    // 判断是否是在微信环境
+    if(Tkjidi.wechatcheck()){
+        $('.New-footerB').show()
+        $('.New-footerA').hide()
+    }else{
+        $('.New-footerA').show()
+        $('.New-footerB').hide()
+    }
+
+    // 分享图片
+    /*分享*/
+    var id = ""
+        ,qrcode_url = "http%3A%2F%2F9.ctrlqq.com%2F%3Fg%3Dwap%26r%3Dview%26taobao_id%3D%26quan%3D"
+        ,buss_name = ""
+        ,thumb = "_310x310.jpg"
+        ,tmall = "0"
+        ,price_quanhou = ""
+        ,price_shoujia = ""
+        ,yhq_price = ""
+        ,sales = ""
+        ,cameraparam = 'id='+id+'&thumb='+thumb+'&buss_name='+buss_name+'&price_quanhou='+price_quanhou+'&price_shoujia='+price_shoujia
+        +'&yhq_price='+yhq_price+'&sales='+sales+'&tmall='+tmall+'&qrcode_url='+qrcode_url;
+
+    function shareImg() {
+        var shareBox = document.getElementsByClassName('share-box')[0];
+        var img = document.getElementsByClassName('share-box-img')[0]
+        img.src = 'http://newapi.tkjidi.com/api/tkcms/procamera?id='+cameraparam
+        Tkjidi.Modal.showModal(shareBox)
+    }
+    // 搜同款
+    var FTX_FLAG = 0;
+    function search() {
+        Tkjidi.Alert.showAlert({
+            content: '是否使用查询全网查询本商品更多优惠?',
+            comfirm: function () {
+                if(FTX_FLAG == 1){
+                    localStorage.removeItem('search')
+                    localStorage.removeItem('kwd')
+                    window.location.href = 'cmswap/search-big.html?val='
+                }else {
+                    window.location.href='/?g=wap&r=searchlist&kwd='
+                }
+            }
+        })
+    }
+    // 图文详情点击
+    var contetn = ''
+    function slideImg(ele) {
+        if ($('.rel_image_list').css('display') == 'none') {
+            $('.rel_image_list').show()
+            $('.imglist_down').show()
+            $('.imglist_up').hide()
+            getDescContent()
+        } else {
+            $('.rel_image_list').hide()
+            $('.imglist_down').hide()
+            $('.imglist_up').show()
+        }
+    }
+    function getDescContent(tbid) {
+        $.ajax({
+            url:'http://h5api.m.taobao.com/h5/mtop.taobao.detail.getdesc/6.0/?jsv=2.4.11&appKey=12574478&t=1538142884844&sign=ead209edb5586f023813d8d3a60c265b&api=mtop.taobao.detail.getdesc&v=6.0&type=jsonp&dataType=jsonp&timeout=20000&callback=mtopjsonp1&data={"id":"' + tbid+ '","type":"1","f":"TB1yD3FcZfpK1RjSZFO8qu6nFla"}',
+            dataType: 'jsonp',
+            success:function (data) {
+                document.getElementById('content').innerHTML = data.data.pcDescContent;
+            },
+            type:'get',
+            jsonpCallback:'mtopjsonp1',
+            error:function (err) {
+                console.log(err)
+            }
+        });
+    }
+    // 分享点击
+    function alertShare() {
+        Tkjidi.Modal.showModal(document.getElementsByClassName('alertShare')[0])
+    }
+    // 复制掏口令弹窗按钮
+    function alertCode() {
+        Tkjidi.Modal.showModal(document.getElementsByClassName('alertCode')[0])
+    }
+    // 复制掏口令
+    function copyText(ele) {
+        var clipboard = new Clipboard('.copy-code');
+        clipboard.on('success', function (e) {
+            ele.innerHTML = '已复制'
+            ele.style.background = '#ff954e'
+        });
+        clipboard.on('error', function (e) {
+            ele.innerHTML = '复制失败'
+            ele.style.background = '#ccc'
+        })
+        setTimeout(function () {
+            ele.innerHTML = '一键复制'
+            ele.style.background = '#ff4e65'
+        }, 3000);
+    }
+    function copyText2(ele) {
+        var str = $('textarea').val()
+        cody = document.getElementsByClassName('share-code')
+        cody[0].setAttribute('data-clipboard-text', str);
+        var clipboard = new Clipboard('.share-code');
+        clipboard.on('success', function (e) {
+            ele.innerHTML = '已复制'
+            ele.style.background = '#ff954e'
+        });
+        clipboard.on('error', function (e) {
+            ele.innerHTML = '复制失败'
+            ele.style.background = '#ccc'
+        })
+        setTimeout(function () {
+            ele.innerHTML = '一键复制'
+            ele.style.background = '#ff4e65'
+        }, 3000);
+    }
+    // 商品图片
+    var swiperWidth = $(".swiper-wrapper").width();
+    $(".swiper-wrapper").css({'height':swiperWidth});
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.swiper-pagination',
+        paginationType : 'fraction',
+        paginationFractionRender: function (swiper, currentClassName, totalClassName) {
+            return '<span class="' + currentClassName + '"></span>' +
+                ' / ' +
+                '<span class="' + totalClassName + '"></span>';
+        }
+    });
+    $.ajax({
+        type: "GET",
+        url: "http://9.ctrlqq.com/index.php?g=wap&m=detail&r=small_images&goods_id=",
+        data: "",
+        dataType: "json",
+        success: function(resp){
+            if (resp.status == 200) {
+                $.each(resp.data, function (index, item) {
+                    mySwiper.appendSlide('<div class="swiper-slide"><img class="deImg"  style="width: 100%;"  src="' + item.img + '" ></div>');
+                });
+                if ($(".swiper-slide").first().attr("data-type") == 'img') {
+                    mySwiper.removeSlide(0);
+                }
+                mySwiper.update();
+            }
+        }
+    });
+
+</script>
+<script src="tkjidicms/cmswap/js3/fuzhi.js"></script>
+</body>
+
+</html>
